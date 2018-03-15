@@ -36,9 +36,16 @@
                 <h2>Current Employees</h2>
             </div>
             <div class="panel-body">
-
-                <form>
-                </form>
+                <table id="employeeTable">
+                    <th>
+                        <td>Employee Name</td>
+                        <td>Role</td>
+                        <td>Start Date</td>
+                        <td>Months Worked</td>
+                        <td>Monthly Rate ($)</td>
+                        <td>Total Billed ($)</td>
+                    </th>
+                </table>
             </div>
         </div>
         <div class="panel panel-default">
@@ -46,7 +53,19 @@
                     <h2>Add Employees</h2>
                 </div>
             <div class="panel-body">
-                <form></form>
+                <form>
+                    <label for="employeeName">Employee Name</label>
+                    <input type="text" id="employeeName" class="form-control">
+
+                    <label for="employeeRole">Role</label>
+                    <input type="text" id="employeeRole" class="form-control">
+
+                    <label for="employeeStart">Start Date (DD/MM/YY)</label>
+                    <input type="text" id="employeeStart" class="form-control">
+
+                    <label for="employeeRate">Monthly Rate</label>
+                    <input type="text" id="employeeRate" class="form-control">
+                </form>
             </div>
         </div>
     </div>
