@@ -15,6 +15,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
         <script src="script.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 </head>
@@ -35,7 +36,7 @@
                 <h2>Current Employees</h2>
             </div>
             <div class="panel-body">
-                <table id="employeeTable">
+                <table>
                     <th>
                         <td>Employee Name</td>
                         <td>Role</td>
@@ -44,6 +45,7 @@
                         <td>Monthly Rate ($)</td>
                         <td>Total Billed ($)</td>
                     </th>
+                    <tbody id="employeeTable"></tbody>
                 </table>
             </div>
         </div>
@@ -64,6 +66,8 @@
 
                     <label for="employeeRate">Monthly Rate</label>
                     <input type="text" id="employeeRate" class="form-control">
+
+                    <input type="submit" id="submitButton">
                 </form>
             </div>
         </div>
