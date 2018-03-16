@@ -20,7 +20,14 @@ $(document).ready(function () {
         var name = $("#employeeName").val().trim();
         var role = $("#employeeRole").val().trim();
         var start = $("#employeeStart").val().trim();
+        console.log(start);
+        var formattedDate = moment(start).format("DD/MM/YY")
+        console.log(moment(start).format("DD/MM/YY"));
         var rate = $("#employeeRate").val().trim();
+        var difference = moment(formattedDate).diff(moment(), "months");
+        console.log(difference);
+        var monthsWorked = Math.abs(difference);
+        console.log(monthsWorked);
 
         database.ref().push({
             EmployeeName: name,
@@ -34,11 +41,11 @@ $(document).ready(function () {
 
         database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function (Childsnapshot) {
             var name = Childsnapshot.val().EmployeeName;
-            console.log(name);
+  
             var role = Childsnapshot.val().EmployeeRole;
-            console.log(role);
+
             var start = Childsnapshot.val().StartDate;
-            console.log(start);
+
             var rate = Childsnapshot.val().MonthlyRate;
 
 
